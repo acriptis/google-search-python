@@ -14,7 +14,7 @@ try:
 except Exception as e:
     print("Missed Environmental variable GOOGLE_CLOUD_API_KEY. "
           "Retrieve GOOGLE_CLOUD_API_KEY at "
-          "https://developers.google.com/custom-search/v1/introduction"
+          "https://developers.google.com/custom-search/v1/introduction")
 
     raise e
 
