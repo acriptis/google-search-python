@@ -18,8 +18,6 @@ except Exception as e:
 
     raise e
 
-
-
 api = GoogleCustomSearch(SEARCH_ENGINE_ID, API_KEY)
 
 # sample output
