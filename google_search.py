@@ -5,7 +5,8 @@ from __future__ import unicode_literals
 
 import logging
 import urllib
-import urlparse
+
+import urllib.parse as urlparse
 
 import json
 from collections import OrderedDict
@@ -50,7 +51,7 @@ class GoogleCustomSearch(object):
         self.api_key = api_key
 
     def search(self, keyword, site=None, max_results=100):
-        assert isinstance(keyword, basestring)
+        assert isinstance(keyword, str)
 
         for start_index in range(1, max_results, 10):  # 10 is max page size
             url = self._make_url(start_index, keyword, site)
@@ -89,4 +90,4 @@ class GoogleCustomSearch(object):
         #    params['siteSearch'] = _strip_protocol(restrict_to_site)
 
         return 'https://www.googleapis.com/customsearch/v1?{}'.format(
-            urllib.urlencode(params))
+            urllib.parse.urlencode(params))

@@ -1,4 +1,4 @@
-Use the Google Custom Search API to search the web from Python.
+Use the Google Custom Search API to search the web from Python 3.
 
 **This is by no means a finished library!**
 
